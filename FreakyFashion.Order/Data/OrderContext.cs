@@ -9,12 +9,17 @@ namespace FreakyFashion.Order.Data
 {
     public class OrderContext : DbContext
     {
-      public DbSet<CutomerOrder> Orders { get; set; }
+      public DbSet<CustomerOrder> Orders { get; set; }
       public DbSet<BasketItem> BasketItems { get; set; }
       public OrderContext(DbContextOptions<OrderContext> options)
                 : base(options)
       {
 
       }
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<CustomerOrder>()
+        //        .HasNoKey();
+        //}
     }
 }

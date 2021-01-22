@@ -1,13 +1,13 @@
-using FreakyFashion.Order.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
 
-namespace FreakyFashion.Order
+namespace FeakyFashion.Gateway
 {
     public class Startup
     {
@@ -21,15 +21,12 @@ namespace FreakyFashion.Order
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddOcelot();
             services.AddHttpClient();
-
-            services.AddDbContext<OrderContext>(options =>
-           options.UseSqlServer(Configuration.GetConnectionString("Default"))
-           );
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "FreakyFashion.Order", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "FeakyFashion.Gateway", Version = "v1" });
             });
         }
 
@@ -40,7 +37,7 @@ namespace FreakyFashion.Order
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "FreakyFashion.Order v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "FeakyFashion.Gateway v1"));
             }
 
             app.UseRouting();
@@ -51,6 +48,8 @@ namespace FreakyFashion.Order
             {
                 endpoints.MapControllers();
             });
+
+            app.UseOcelot().Wait();
         }
     }
 }

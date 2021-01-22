@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreakyFashionServices.Baske
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{26E37B6D-F58E-4771-8843-DBAA9D32AE31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreakyFashion.ProductPrice", "FreakyFashion.ProductPrice\FreakyFashion.ProductPrice.csproj", "{F9CF5FA7-589B-42D3-BC65-EA649E912BEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreakyFashion.ProductPrice", "FreakyFashion.ProductPrice\FreakyFashion.ProductPrice.csproj", "{F9CF5FA7-589B-42D3-BC65-EA649E912BEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreakyFashion.Order", "FreakyFashion.Order\FreakyFashion.Order.csproj", "{1588B4A4-4AF7-4ED6-A588-52E39E7F7EF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreakyFashion.Order", "FreakyFashion.Order\FreakyFashion.Order.csproj", "{1588B4A4-4AF7-4ED6-A588-52E39E7F7EF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeakyFashion.Gateway", "FeakyFashion.Gateway\FeakyFashion.Gateway.csproj", "{01727BB7-218F-4606-BE49-A16526411A7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{1588B4A4-4AF7-4ED6-A588-52E39E7F7EF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1588B4A4-4AF7-4ED6-A588-52E39E7F7EF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1588B4A4-4AF7-4ED6-A588-52E39E7F7EF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01727BB7-218F-4606-BE49-A16526411A7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01727BB7-218F-4606-BE49-A16526411A7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01727BB7-218F-4606-BE49-A16526411A7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01727BB7-218F-4606-BE49-A16526411A7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

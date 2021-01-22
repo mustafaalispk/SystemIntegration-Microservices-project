@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:55457",
+      "applicationUrl": "http://localhost:63224",
       "sslPort": 0
     }
   },
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "FreakyFashion.Order": {
+    "FeakyFashion.Gateway": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

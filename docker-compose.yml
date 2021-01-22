@@ -6,7 +6,8 @@ services:
     build:
       context: .
       dockerfile: FreakyFashionServices.Basket/Dockerfile
-  
+    ports:
+    - 55033:80
   redis:
     image: redis
   freakyfashionservices.catalog:
@@ -14,4 +15,27 @@ services:
     build:
       context: .
       dockerfile: FreakyFashionServices.Catalog/Dockerfile
+
+
+  feakyfashion.gateway:
+    image: ${DOCKER_REGISTRY-}feakyfashiongateway
+    build:
+      context: .
+      dockerfile: FeakyFashion.Gateway/Dockerfile
+    ports:
+    - 55020:80
+
+
+  freakyfashion.order:
+    image: ${DOCKER_REGISTRY-}freakyfashionorder
+    build:
+      context: .
+      dockerfile: FreakyFashion.Order/Dockerfile
+
+
+  freakyfashion.productprice:
+    image: ${DOCKER_REGISTRY-}freakyfashionproductprice
+    build:
+      context: .
+      dockerfile: FreakyFashion.ProductPrice/Dockerfile
 
